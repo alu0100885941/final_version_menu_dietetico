@@ -1,5 +1,12 @@
 require "dieta/version"
 
 module Dieta
-  # Your code goes here...
+  class Menu
+  	
+	attr_reader :titulo
+	def initialize(titulo)
+		@titulo = titulo
+	end
+
+  end
 end
