@@ -17,6 +17,7 @@ end
 describe 'Prueba 2: Porcentajes.' do
 		it 'Debe existir un rango de porcentajes en cada ingesta de la dieta' do
 			expect(@desayuno.porcentaje).to eq([15, 20]);
+		end
 end
 end	
 
