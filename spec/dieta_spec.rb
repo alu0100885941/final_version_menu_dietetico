@@ -23,8 +23,7 @@ end
 describe "Prueba 3: Descripción de platos." do
 		it "El plato debe tener una descripción." do
 			expect(@desayuno.platos).to eq(["Tostadas con aceite"])
-end	
+		end	
 end
-
 end
 
