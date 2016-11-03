@@ -94,8 +94,8 @@ describe "Prueba 13: Comprobando el metodo get para el conjunto de porcentajes d
 	end
 describe "Prueba final: Formateo correcto de la salida." do
 	it "El formato debe ser el indicado a continuación." do
-		expext(@desayuno.to_s()).to eq("Desayuno (15 - 20%)\n- Tostadas con aceite, 2 porciones, 80 g\n- Café con lecuhe, 1 taza, 100 g\nV.C.T. | %   150,75 KCal | 20% - 30% - 60%\n")
-	end
+		expect(@desayuno.to_s()).to eq("Desayuno (15 - 20%)\n- Tostadas con aceite, 2 porciones, 80 g\n- Café con leche, 1 taza, 100 g\nV.C.T. | %   150,75 KCal | 20% - 30% - 60%\n")
+		end
 	end
 end
 
