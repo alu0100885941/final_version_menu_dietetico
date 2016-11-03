@@ -4,7 +4,7 @@ require "./lib/dieta.rb"
 context 'Creando la clase a probar' do
         before:each do
 
-                @desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]])
+                @desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]], "150,75 KCal")
 
         end
 
@@ -48,6 +48,12 @@ describe "Prueba 6: Conjunto de platos requerido." do
                         expect(@desayuno.platos[1][2]).to eq(100)
                 end
         end
+
+describe "Prueba 7: Calorías totales de la ingesta deben sen especificadas." do
+		it "La ingesta debe indicar su peso calorifico." do
+			expect(@desayuno.vct).to eq("150,75 KCal")
+		end
+	end
 
 end
 
