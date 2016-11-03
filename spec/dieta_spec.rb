@@ -65,17 +65,20 @@ describe "Prueba 8: Porcentajes de grasas, hidratos de carbono y proteinas de un
 describe "Prueba 9: Comprobando el metodo get para el titulo del menú." do
 	it "Debe devolver un titulo" do
 		expect(@desayuno.get_titulo()).to eq("Desayuno")
-	end
+		
+		end
 	end
 describe "Prueba 10: Comprobar el metodo get para los platos." do
 	it "Debe devolver una descripción de plato" do
 		expect(@desayuno.get_platos(0,0)).to eq("Tostadas con aceite")
-	end
+	
+		end
 	end
 describe "Prueba 11: Comprobando el metodo get para la ingesta diaria." do
 	it "Debe devolver una ingesta diaria" do
 		expect(@desayuno.get_ingesta()).to eq([15,20])
-	end
+	
+		end
 	end
 end
 
