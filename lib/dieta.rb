@@ -20,5 +20,13 @@ module Dieta
 		@porcentaje
 	end
 
+	def get_vct()
+		@vct
+	end
+	
+	def get_pgh()
+		@porcentaje_pgh
+	end
+
   end
 end
