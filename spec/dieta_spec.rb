@@ -2,36 +2,52 @@ require "spec_helper"
 require "./lib/dieta.rb"
 
 context 'Creando la clase a probar' do
-	before:each do
-	
-		@desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones"]])
-		
-	end
+        before:each do
+
+                @desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]])
+
+        end
 
 describe 'Prueba 1: Titulo.' do
-		it 'Tiene que haber un titulo' do
-			expect(@desayuno.titulo).to eq("Desayuno")
-		end
+                it 'Tiene que haber un titulo' do
+                        expect(@desayuno.titulo).to eq("Desayuno")
+                end
 end
 
 describe 'Prueba 2: Porcentajes.' do
-		it 'Debe existir un rango de porcentajes en cada ingesta de la dieta' do
-			expect(@desayuno.porcentaje).to eq([15, 20]);
-		end
+                it 'Debe existir un rango de porcentajes en cada ingesta de la dieta' do
+                        expect(@desayuno.porcentaje).to eq([15, 20]);
+                end
 end
 
 describe "Prueba 3: Descripción de platos." do
-		it "El plato debe tener una descripción." do
-			expect(@desayuno.platos[0][0]).to eq("Tostadas con aceite")
-		end	
+                it "El plato debe tener una descripción." do
+                        expect(@desayuno.platos[0][0]).to eq("Tostadas con aceite")
+                end
 end
 
 
 describe "Prueba 4: Porciones adecuadas." do
-		it "Las porciones adecuadas son." do
-			expect(@desayuno.platos[0][1]).to eq("2 porciones")
+                it "Las porciones adecuadas son." do
+                        expect(@desayuno.platos[0][1]).to eq("2 porciones")
 
-		end
-	end
+                end
+        end
+
+
+describe "Prueba 5: Ingesta en gramos" do
+                it "La Ingesta debe ser definida" do
+                        expect(@desayuno.platos[0][2]).to eq(80)
+                end
+        end
+
+describe "Prueba 6: Conjunto de platos requerido." do
+                it "El conjunto de platos debe existir." do
+                        expect(@desayuno.platos[1][0]).to eq("Café con leche")
+                        expect(@desayuno.platos[1][1]).to eq("1 taza")
+                        expect(@desayuno.platos[1][2]).to eq(100)
+                end
+        end
+
 end
 
