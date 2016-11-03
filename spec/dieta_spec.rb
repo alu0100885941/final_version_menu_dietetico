@@ -4,7 +4,7 @@ require "./lib/dieta.rb"
 context 'Creando la clase a probar' do
         before:each do
 
-                @desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]], "150,75 KCal")
+                @desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]], "150,75 KCal", [20,30,60])
 
         end
 
@@ -54,6 +54,14 @@ describe "Prueba 7: Calorías totales de la ingesta deben ser especificadas." do
 			expect(@desayuno.vct).to eq("150,75 KCal")
 		end
 	end
+describe "Prueba 8: Porcentajes de grasas, hidratos de carbono y proteinas de un conjunto de platos." do
+		it "Debe existir un porcentaje de proteinas, grasa e hidratos de carbono en ese orden para cada conjunto de platos." do
+			expect(@desayuno.porcentaje_pgh[0]).to eq(20)
+			expect(@desayuno.porcentaje_pgh[1]).to eq(30)
+			expect(@desayuno.porcentaje_pgh[2]).to eq(60)
+		end
+	end
+
 
 end
 
