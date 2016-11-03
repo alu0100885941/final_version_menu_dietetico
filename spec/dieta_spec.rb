@@ -4,7 +4,7 @@ require "./lib/dieta.rb"
 context 'Creando la clase a probar' do
 	before:each do
 	
-		@desayuno = Dieta::Menu.new("Desayuno", [15, 20], ["Tostadas con aceite"])
+		@desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones"]])
 		
 	end
 
@@ -22,8 +22,16 @@ end
 
 describe "Prueba 3: Descripción de platos." do
 		it "El plato debe tener una descripción." do
-			expect(@desayuno.platos).to eq(["Tostadas con aceite"])
+			expect(@desayuno.platos[0][0]).to eq("Tostadas con aceite")
 		end	
 end
+
+
+describe "Prueba 4: Porciones adecuadas." do
+		it "Las porciones adecuadas son." do
+			expect(@desayuno.platos[0][1]).to eq("2 porciones")
+
+		end
+	end
 end
 
