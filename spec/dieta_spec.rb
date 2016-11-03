@@ -80,5 +80,18 @@ describe "Prueba 11: Comprobando el metodo get para la ingesta diaria." do
 	
 		end
 	end
+
+
+describe "Prueba 12: Comprobando el metodo get para vct." do
+	it "Debe devolver el VCT" do
+		expect(@desayuno.get_vct()).to eq("150,75 KCal")
+		end
+	end
+describe "Prueba 13: Comprobando el metodo get para el conjunto de porcentajes de Proteinas, Grasa e Hidratos" do
+	it "Debe devolver un vector de dichos datos." do
+		expect(@desayuno.get_pgh()).to eq([20,30,60])
+		end
+	end
+
 end
 
