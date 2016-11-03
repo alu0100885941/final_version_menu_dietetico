@@ -49,8 +49,8 @@ describe "Prueba 6: Conjunto de platos requerido." do
                 end
         end
 
-describe "Prueba 7: Calorías totales de la ingesta deben sen especificadas." do
-		it "La ingesta debe indicar su peso calorifico." do
+describe "Prueba 7: Calorías totales de la ingesta deben ser especificadas." do
+		it "La ingesta debe indicar su peso calorífico." do
 			expect(@desayuno.vct).to eq("150,75 KCal")
 		end
 	end
