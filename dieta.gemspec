@@ -6,12 +6,12 @@ require 'dieta/version'
 Gem::Specification.new do |spec|
   spec.name          = "dieta"
   spec.version       = Dieta::VERSION
-  spec.authors       = ["Jaime Madico"]
-  spec.email         = ["alu0100895179@ull.edu.es"]
+  spec.authors       = ["Jaime Madico", "Sergio Morente"]
+  spec.email         = ["alu0100895179@ull.edu.es", "alu0100885941@ull.edu.es"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Gema que nos permite escribir dietas}
+  spec.description   = %q{Gema que nos permite escribir dietas, en concreto distintos objetos menú con información detallada de los alimentos, calorías, grasas,etc.}
+  spec.homepage      = "https://github.com/ULL-ESIT-LPP-1617/tdd-menu-equipo_33"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

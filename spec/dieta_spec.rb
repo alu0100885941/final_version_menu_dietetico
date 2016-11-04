@@ -4,7 +4,7 @@ require "./lib/dieta.rb"
 context 'Creando la clase a probar' do
         before:each do
 
-                @desayuno = Dieta::Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]], "150,75 KCal", [20,30,60])
+                @desayuno = Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]], "150,75 KCal", [20,30,60])
 
         end
 
