@@ -20,4 +20,12 @@ describe "Probando insert" do
 		expect(@lista.inicio[:value]).to eq(1)
 	end
 end
+
+describe "Probando extract" do
+	it "La extracción debe ser correcta." do
+		expect(@lista.extract).to eq(1)
+	end
+end
+		
+
 end
