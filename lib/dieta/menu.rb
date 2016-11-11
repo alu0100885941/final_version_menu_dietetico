@@ -26,8 +26,8 @@ class Menu
         end
 
         def to_s()
-
-                x = @titulo
+		x=""
+                x = "#{@titulo}"
                 x << " (#{@porcentaje[0]} - #{@porcentaje[1]}%)\n"
                 i=0
                 while (i<platos.length())

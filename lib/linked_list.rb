@@ -6,14 +6,25 @@ class Linked_list
 		@inicio=Node.new(nil,nil)
 	end			
 	def insert(data)
-		if(inicio==nil)
-			inicio=Node.new(data,nil)
-		else
 			aux=Node.new(data,@inicio)
 			@inicio=aux
+	end
+	def extract
+		temp= @inicio[:value]
+		@inicio=@inicio[:next]
+		temp
+	end
+	def to_s
+		temp = @inicio
+		cont= 1
+		string = "" 
+		while(temp[:next]!=nil)
+			string+="Valor numero #{cont}) Equivale a #{temp[:value]}\n"
+			temp=temp[:next]
+			cont+=1
 		end
+
+		string
 	end
-	def dato_inicio
-		@inicio[:value]
-	end
+
 end	

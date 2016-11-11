@@ -1,12 +1,11 @@
 require "spec_helper.rb"
 require "./lib/linked_list.rb"
-
+require "./lib/dieta/menu.rb"
 context 'Creando la clase a probar' do
         before:all do
 
                 @lista = Linked_list.new()
 		
-
         end
 
 describe "Probando la creación de clase" do
@@ -37,5 +36,32 @@ describe "Probando metodo  to_s" do
 		@lista.insert(3)
 		expect(@lista.to_s).to eq("Valor numero 1) Equivale a 3\nValor numero 2) Equivale a 2\nValor numero 3) Equivale a 1\nValor numero 4) Equivale a 6\nValor numero 5) Equivale a 5\nValor numero 6) Equivale a 4\n")
 	end
+
 	end		
+
+describe "Probando lista de menús" do
+	it "Operaciones necesarias con listas de menus" do
+		@lista.extract
+		@lista.extract
+		@lista.extract
+		@lista.extract
+		@lista.extract
+		@lista.extract
+		dummy= Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]], "150,75 KCal", [20,30,60])
+		@lista.insert(dummy)
+
+		expect(@lista.extract).to eq(dummy)
+	
+	end
+	end
+
+describe "Probando lista de menús" do
+	it "Operación formateo correcta, comprobar." do
+		                          		
+		 
+		dummy = Menu.new("Desayuno", [15, 20], [["Tostadas con aceite", "2 porciones", 80],["Café con leche", "1 taza", 100]], "150,75 KCal", [20,30,60])
+		@lista.insert(dummy)
+		expect(@lista.to_s).to eq("Valor numero 1) Equivale a #{dummy.to_s}\n")
+	end
+	end
 end
