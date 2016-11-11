@@ -1,5 +1,5 @@
 require "spec_helper.rb"
-require "./lib/linked_list.rb"
+require "./lib/dieta/linked_list.rb"
 require "./lib/dieta/menu.rb"
 context 'Creando la clase a probar' do
         before:all do
