@@ -6,7 +6,7 @@ class Dl_linked_list
 			@inicio= nil
 			@tail= nil		
 	end			
-	def insert(data)
+	def insert_final(data)
 			if(@inicio==nil && @tail==nil)
 				aux=Node.new(data,nil,nil)
 				@inicio= aux
@@ -18,11 +18,28 @@ class Dl_linked_list
 
 			end
 	end
-	def extract
+	def insert_inicio(data)
+			if(@inicio==nil && @tail==nil)
+				aux=Node.new(data,nil,nil)
+				@inicio=aux
+				@tail = @inicio
+			else
+				aux=Node.new(data,nil,@inicio)
+				@inicio[:prev]=aux
+				@inicio=aux
+			end
+	end
+				
+	def extract_inicio
 		temp= @inicio[:value]
 		@inicio=@inicio[:next]
 		@inicio[:prev]=nil
 		temp
+	end
+	def extract_final
+		temp=@tail[:value]
+		@tail=@tail[:prev]
+		@tail[:next]=nil
 	end
 	def to_s
 		temp = @inicio
