@@ -31,15 +31,19 @@ class Dl_linked_list
 	end
 				
 	def extract_inicio
+		if(@inicio!=nil)
 		temp= @inicio[:value]
 		@inicio=@inicio[:next]
 		@inicio[:prev]=nil
 		temp
+		end
 	end
 	def extract_final
+		if(@inicio!=nil)
 		temp=@tail[:value]
 		@tail=@tail[:prev]
 		@tail[:next]=nil
+		end
 	end
 	def to_s
 		temp = @inicio
