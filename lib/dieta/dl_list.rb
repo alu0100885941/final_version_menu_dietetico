@@ -2,10 +2,16 @@ class Dl_linked_list
 	
 	attr_reader :inicio, :tail
 	Node = Struct.new(:value,:next,:prev)
-	def initialize
+	def initialize(&block)
 			@inicio= nil
-			@tail= nil		
-	end			
+			@tail= nil
+	if(block_given?)
+		instance_eval(&block)
+	end		
+	end	
+	def elemento(options)
+		insert_inicio(options[:data])
+	end		
 	def insert_final(data)
 			if(@inicio==nil && @tail==nil)
 				aux=Node.new(data,nil,nil)
@@ -49,7 +55,7 @@ class Dl_linked_list
 		temp = @inicio
 		cont= 1
 		string = "" 
-		while(temp[:next]!=nil)
+		while(temp!=nil)
 			string+="Valor numero #{cont}) Equivale a #{temp[:value]}\n"
 			temp=temp[:next]
 			cont+=1

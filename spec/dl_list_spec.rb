@@ -13,6 +13,7 @@ context "Double linked list." do
 		it "Creando instacia de objeto Dl_list" do
 			expect(@dl_list.inicio).to eq(nil)
 			expect(@dl_list.tail).to eq(nil)
+		
 		end
 	end
 	describe "Insertar en la lista" do
